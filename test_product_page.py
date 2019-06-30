@@ -52,3 +52,11 @@ def test_guest_can_go_to_login_page_from_product_page(browser):
     page = ProductPage(browser, link)
     page.open()
     page.go_to_login_page()
+
+
+class TestUserAddToCartFromProductPage(object):
+    def user_guest_can_add_product_to_cart(self, browser, link):
+        pass
+
+    def test_user_cant_see_success_message_after_adding_product_to_cart(self, browser):
+        pass
