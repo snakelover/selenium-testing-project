@@ -9,7 +9,6 @@ class ProductPage(BasePage):
 
     def get_product_name(self):
         product_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
-        # print("product_name = ", product_name)
         return product_name
 
     def get_product_price(self):
@@ -22,7 +21,6 @@ class ProductPage(BasePage):
 
     def should_be_success_of_addition_message(self):
         name_from_message = self.browser.find_element(*ProductPageLocators.NAME_IN_MESSAGE_OF_SUCCESFUL_ADDITION).text
-        # print("name_from_message= ", name_from_message)
         assert name_from_message == self.get_product_name(), "Name of product in the message is not the same as the actual product name"
 
     def should_be_the_right_price_of_the_cart(self):
